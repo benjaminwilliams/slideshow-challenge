@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 
+//View and interact with thumbnails
 function Thumbs({ items, currentIndex }) {
     
     return (

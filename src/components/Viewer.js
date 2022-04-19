@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Large image view
 function Viewer({ catalogImage }) {
   return (
     <div className='layout-row justify-content-center'>
