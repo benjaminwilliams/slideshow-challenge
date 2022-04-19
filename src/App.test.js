@@ -79,13 +79,13 @@ describe('Catalog Viewer', () => {
     expect(viewer.src).toContain(catalogs[1].image)
   })
 
-  test('clicking on the previous button when on the first item should show the last image',  () => {
+  test('clicking on the previous button when on the first item should show the last image', () => {
     expect(viewer.src).toContain(catalogs[0].image)
     fireEvent.click(prevBtn, { button: '0' })
     expect(viewer.src).toContain(catalogs[3].image)
   })
 
-  test('clicking on the next button when on the last item should show the first image',  () => {
+  test('clicking on the next button when on the last item should show the first image', () => {
     fireEvent.click(thumbBtn4, { button: '0' })
     expect(viewer.src).toContain(catalogs[3].image)
     fireEvent.click(nextBtn, { button: '0' })
@@ -96,7 +96,7 @@ describe('Catalog Viewer', () => {
     expect(viewer.src).toContain(catalogs[0].image)
     fireEvent.click(toggleSlideShowBtn, { button: '0' })
     expect(toggleSlideShowBtn.checked).toEqual(true)
-    act (() => jest.advanceTimersByTime(6010))
+    act(() => jest.advanceTimersByTime(6010))
     expect(viewer.src).toContain(catalogs[2].image)
   })
 
@@ -107,7 +107,7 @@ describe('Catalog Viewer', () => {
     fireEvent.click(nextBtn, { button: '0' })
     fireEvent.click(nextBtn, { button: '0' })
     fireEvent.click(prevBtn, { button: '0' })
-    act (() => jest.advanceTimersByTime(3010))
+    act(() => jest.advanceTimersByTime(3010))
     expect(viewer.src).toContain(catalogs[1].image)
   })
 
@@ -116,11 +116,11 @@ describe('Catalog Viewer', () => {
     expect(viewer.src).toContain(catalogs[1].image)
     fireEvent.click(toggleSlideShowBtn, { button: '0' })
     expect(toggleSlideShowBtn.checked).toEqual(true)
-    act (() => jest.advanceTimersByTime(3010))
+    act(() => jest.advanceTimersByTime(3010))
     expect(viewer.src).toContain(catalogs[2].image)
     fireEvent.click(toggleSlideShowBtn, { button: '0' })
     expect(toggleSlideShowBtn.checked).toEqual(false)
-    act (() => jest.advanceTimersByTime(3010))
+    act(() => jest.advanceTimersByTime(3010))
     expect(viewer.src).toContain(catalogs[2].image)
   })
 })
