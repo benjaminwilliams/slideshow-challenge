@@ -11,6 +11,7 @@ function Thumbs({ items, currentIndex, setActiveIndex }) {
             id={idx}
             key={idx}
             data-testid={'thumb-button-' + idx}
+            onClick={() => setActiveIndex(idx)}
           >
             <span
               className={'inline-flex w-90 pa-4 image-thumb ' +
@@ -20,7 +21,6 @@ function Thumbs({ items, currentIndex, setActiveIndex }) {
                 className='mx-5 thumb'
                 id={idx}
                 style={{ backgroundImage: 'url(' + catalog.thumb + ')' }}
-                onClick={() => setActiveIndex(idx)}
               />
             </span>
           </span>
